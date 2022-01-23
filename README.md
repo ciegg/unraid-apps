@@ -1,1 +1,2 @@
-# unraid-apps
+# unraid-templates
+Collection of unraid templates.
