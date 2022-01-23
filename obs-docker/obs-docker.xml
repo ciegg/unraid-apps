@@ -17,7 +17,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1642978618</DateInstalled>
+  <DateInstalled>1642979387</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>This is a container for running OBS applications completely inside a Docker container. You do not need to forward your running XAuth or allow Docker to draw onto your display. Nor do you need to use SSH to forward X11. This container exposes a VNC webclient to the host and therefore everything is contained within the container.</Description>
@@ -33,7 +33,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir/>
+      <HostDir>/mnt/user/appdata/obs/</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -46,7 +46,7 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/obs/" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/obs/" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/obs/</Config>
   <Config Name="VNC Port" Target="5901" Default="" Mode="tcp" Description="Container Port: 5901" Type="Port" Display="always" Required="true" Mask="false">5901</Config>
-  <Config Name="Password" Target="VNC_PASSWD" Default="" Mode="" Description="Container Variable: VNC_PASSWD" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Password" Target="VNC_PASSWD" Default="123456 " Mode="" Description="Container Variable: VNC_PASSWD" Type="Variable" Display="always" Required="true" Mask="true"/>
 </Container>
