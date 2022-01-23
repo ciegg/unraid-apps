@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>obs-docker</Name>
+  <Repository>cieg/obs-docker</Repository>
+  <Registry>https://hub.docker.com/repository/docker/cieg/obs-docker</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>This is a container for running OBS applications completely inside a Docker container. You do not need to forward your running XAuth or allow Docker to draw onto your display. Nor do you need to use SSH to forward X11. This container exposes a VNC webclient to the host and therefore everything is contained within the container.</Overview>
+  <Category>Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:5901]</WebUI>
+  <TemplateURL/>
+  <Icon>https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/OBS_Studio_Logo.svg/96px-OBS_Studio_Logo.svg.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1642978618</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>This is a container for running OBS applications completely inside a Docker container. You do not need to forward your running XAuth or allow Docker to draw onto your display. Nor do you need to use SSH to forward X11. This container exposes a VNC webclient to the host and therefore everything is contained within the container.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5901</HostPort>
+        <ContainerPort>5901</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>VNC_PASSWD</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/obs/" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="VNC Port" Target="5901" Default="" Mode="tcp" Description="Container Port: 5901" Type="Port" Display="always" Required="true" Mask="false">5901</Config>
+  <Config Name="Password" Target="VNC_PASSWD" Default="" Mode="" Description="Container Variable: VNC_PASSWD" Type="Variable" Display="always" Required="true" Mask="true"/>
+</Container>
